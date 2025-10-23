@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Busca de Filmes (OMDb API)</title>
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Projeto: Busca de Filmes (API IMDb via OMDb)</h1>
+            <p>
+                Busque filmes por **Título** ou filtre por **Ator/Atriz**. Opcionalmente, refine pelo **Ano**.
+            </p>
+        </header>
+
+        <hr>
+
+        <section id="container-pesquisa">
+            <h2>Etapa 1 — Fazer a busca</h2>
+            <p>Selecione o tipo de busca e digite o termo desejado.</p>
+
+            <div class="barra-pesquisa">
+                <select id="tipo-busca">
+                    <option value="title">Título do Filme/Série</option>
+                    
+                </select>
+                
+                <input id="campo-busca" type="text" placeholder="Ex.: Batman, Matrix, Avatar..." />
+                
+                <input id="campo-ano" type="number" placeholder="Ano (opcional)" min="1900" max="2099">
+                
+                <button id="botao-buscar">Buscar</button>
+            </div>
+
+            <p id="mensagem-status" class="status">Aguardando termo de busca...</p>
+        </section>
+
+        <hr>
+
+        <section id="container-resultados">
+            <h2>Etapa 2 — Resultados da busca</h2>
+            <p>Abaixo aparecerão os pôsteres e nomes dos filmes retornados:</p>
+            <div id="lista-resultados" class="grade"></div>
+        </section>
+
+        <hr>
+
+        <section id="container-paginacao">
+            <h2> Etapa 3 — Navegar entre páginas</h2>
+            <p>Use os botões para ver mais resultados.</p>
+            <div class="paginacao">
+                <button id="botao-anterior" disabled>◀ Anterior</button>
+                <button id="botao-proximo" disabled>Próxima ▶</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <footer>
+            <p>
+                Ryan Santos
+            </p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
